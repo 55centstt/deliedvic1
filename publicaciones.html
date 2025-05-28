@@ -1,88 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deliedvic - Cursos</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Publicaciones - Deliedvic</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
-  <header>
-    <h1>Deliedvic</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="publicaciones.html">Cursos</a>
-      <a href="llamanos.html">Llámanos</a>
-      <a href="contactanos.html">Contáctanos</a>
-    </nav>
-  </header>
+<header>
+  <h1>Deliedvic - Cursos Disponibles</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="publicaciones.html">Publicaciones</a>
+    <a href="llamanos.html">Llámanos</a>
+    <a href="contactanos.html">Contáctanos</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="cursos">
-      <h2>Explora nuestros cursos profesionales</h2>
+<main>
+  <section class="cursos-container">
+    <article class="curso">
+      <img src="img/peluqueria..jpg" alt="Curso de Peluquería" />
+      <h2>Peluquería</h2>
+      <p>Aprende técnicas modernas de peluquería, cortes y peinados profesionales.</p>
+      <button onclick="comprarCurso('price_1RTWusC7qLaxNJZOZR57Coyr')" class="buy-button">Comprar por $2000</button>
+    </article>
 
-      <div class="curso">
-        <img src="img/peluqueria..jpg" alt="Curso de Peluquería" class="imagen-curso" />
-        <h3>Peluquería Profesional</h3>
-        <p>Aprende técnicas modernas de corte, color, peinados y tratamientos capilares con expertos del sector.</p>
-        <button onclick="comprarCurso('price_1RTWusC7qLaxNJZOZR57Coyr')">Comprar - $2,000</button>
-      </div>
+    <article class="curso">
+      <img src="img/diseno-grafico..jpg" alt="Curso de Diseño Gráfico" />
+      <h2>Diseño Gráfico</h2>
+      <p>Domina el diseño digital, manejo de herramientas como Photoshop e Illustrator.</p>
+      <button onclick="comprarCurso('price_1RTWyeC7qLaxNJZOCTuIRXPY')" class="buy-button">Comprar por $2000</button>
+    </article>
 
-      <div class="curso">
-        <img src="img/diseno-grafico..jpg" alt="Curso de Diseño Gráfico" class="imagen-curso" />
-        <h3>Diseño Gráfico Creativo</h3>
-        <p>Domina herramientas como Photoshop e Illustrator y crea contenido visual impactante.</p>
-        <button onclick="comprarCurso('price_1RTWyeC7qLaxNJZOCTuIRXPY')">Comprar - $2,000</button>
-      </div>
+    <article class="curso">
+      <img src="img/programacion-web.jpg" alt="Curso de Programación Web" />
+      <h2>Programación Web</h2>
+      <p>Aprende a crear sitios web modernos con HTML, CSS, JavaScript y frameworks.</p>
+      <button onclick="comprarCurso('price_1RTX2aC7qLaxNJZOZq2nwFbd')" class="buy-button">Comprar por $2000</button>
+    </article>
 
-      <div class="curso">
-        <img src="img/programacion-web.jpg" alt="Curso de Programación Web" class="imagen-curso" />
-        <h3>Programación Web</h3>
-        <p>Aprende HTML, CSS y JavaScript desde cero y crea páginas web modernas y funcionales.</p>
-        <button onclick="comprarCurso('price_1RTX2aC7qLaxNJZOZq2nwFbd')">Comprar - $2,000</button>
-      </div>
+    <article class="curso">
+      <img src="img/marketing-digital..jpg" alt="Curso de Marketing Digital" />
+      <h2>Marketing Digital</h2>
+      <p>Descubre estrategias efectivas para promocionar productos y servicios online.</p>
+      <button onclick="comprarCurso('price_1RTX4uC7qLaxNJZOsgJCUxaD')" class="buy-button">Comprar por $2000</button>
+    </article>
 
-      <div class="curso">
-        <img src="img/marketing-digital..jpg" alt="Curso de Marketing Digital" class="imagen-curso" />
-        <h3>Marketing Digital</h3>
-        <p>Conviértete en un experto en redes sociales, SEO, embudos de venta y publicidad online.</p>
-        <button onclick="comprarCurso('price_1RTX4uC7qLaxNJZOsgJCUxaD')">Comprar - $2,000</button>
-      </div>
+    <article class="curso">
+      <img src="img/fotografia.jpg" alt="Curso de Fotografía" />
+      <h2>Fotografía</h2>
+      <p>Aprende técnicas profesionales para capturar imágenes impactantes y artísticas.</p>
+      <button onclick="comprarCurso('price_1RTX7BC7qLaxNJZOxLrN8S1M')" class="buy-button">Comprar por $2000</button>
+    </article>
 
-      <div class="curso">
-        <img src="img/fotografia.jpg" alt="Curso de Fotografía" class="imagen-curso" />
-        <h3>Fotografía Profesional</h3>
-        <p>Aprende composición, iluminación y edición para capturar imágenes espectaculares.</p>
-        <button onclick="comprarCurso('price_1RTX7BC7qLaxNJZOxLrN8S1M')">Comprar - $2,000</button>
-      </div>
+    <article class="curso">
+      <img src="img/idiomas..jpg" alt="Curso de Idiomas" />
+      <h2>Idiomas</h2>
+      <p>Domina nuevos idiomas con métodos prácticos y comunicación efectiva.</p>
+      <button onclick="comprarCurso('price_1RTX8nC7qLaxNJZOpl9AH6IB')" class="buy-button">Comprar por $2000</button>
+    </article>
 
-      <div class="curso">
-        <img src="img/idiomas..jpg" alt="Curso de Idiomas" class="imagen-curso" />
-        <h3>Idiomas Internacionales</h3>
-        <p>Estudia inglés, francés, alemán y más con recursos interactivos y clases prácticas.</p>
-        <button onclick="comprarCurso('price_1RTX8nC7qLaxNJZOpl9AH6IB')">Comprar - $2,000</button>
-      </div>
+    <article class="curso">
+      <img src="img/cocina-gourmet..jpg" alt="Curso de Cocina Gourmet" />
+      <h2>Cocina Gourmet</h2>
+      <p>Aprende recetas y técnicas culinarias para crear platillos sofisticados.</p>
+      <button onclick="comprarCurso('price_1RTXBIC7qLaxNJZOzPQLpyOB')" class="buy-button">Comprar por $2000</button>
+    </article>
 
-      <div class="curso">
-        <img src="img/cocina-gourmet..jpg" alt="Curso de Cocina Gourmet" class="imagen-curso" />
-        <h3>Cocina Gourmet</h3>
-        <p>Aprende técnicas de cocina profesional, presentación de platos y recetas de chefs expertos.</p>
-        <button onclick="comprarCurso('price_1RTXBIC7qLaxNJZOzPQLpyOB')">Comprar - $2,000</button>
-      </div>
+    <article class="curso">
+      <img src="img/finanzas-personales..jpg" alt="Curso de Finanzas Personales" />
+      <h2>Finanzas Personales</h2>
+      <p>Gestiona tu dinero eficazmente, aprende ahorro, inversión y planificación financiera.</p>
+      <button onclick="comprarCurso('price_1RTXCQC7qLaxNJZO6NRmNuRk')" class="buy-button">Comprar por $2000</button>
+    </article>
+  </section>
+</main>
 
-      <div class="curso">
-        <img src="img/finanzas-personales..jpg" alt="Curso de Finanzas Personales" class="imagen-curso" />
-        <h3>Finanzas Personales</h3>
-        <p>Administra tu dinero, ahorra, invierte y mejora tu futuro económico con estrategias prácticas.</p>
-        <button onclick="comprarCurso('price_1RTXCQC7qLaxNJZO6NRmNuRk')">Comprar - $2,000</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Deliedvic. Todos los derechos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
